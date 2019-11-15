@@ -31,7 +31,7 @@ end
 def get_english_meaning(path, emoticon)
   # code goes here
   load = load_library(path)
-    if load.any? {|word| word == emoticon}
+    if load["get_meaning"][emoticon]
       return load["get_meaning"][emoticon]
     else
       puts "Sorry, that emoticon was not found"
