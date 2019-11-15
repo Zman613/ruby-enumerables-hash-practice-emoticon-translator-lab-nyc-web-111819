@@ -21,19 +21,19 @@ end
 def get_japanese_emoticon(path, emoticon)
   # code goes here
   load = load_library(path)
-    if load["get_emoticon"][emoticon] == nil
-      puts "Sorry, that emoticon was not found"
-    else
+    if load.any? (emoticon)
       return load["get_emoticon"][emoticon]
+    else
+      puts "Sorry, that emoticon was not found"
     end
 end
 
 def get_english_meaning(path, emoticon)
   # code goes here
   load = load_library(path)
-    if load["get_meaning"][emoticon] == nil
-      puts "Sorry, that emoticon was not found"
-    else
+    if load["get_meaning"][emoticon]
       return load["get_meaning"][emoticon]
+    else
+      puts "Sorry, that emoticon was not found"
     end
 end
