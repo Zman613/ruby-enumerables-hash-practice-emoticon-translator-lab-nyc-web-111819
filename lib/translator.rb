@@ -25,8 +25,15 @@ def get_japanese_emoticon(path, emoticon)
       return load["get_emoticon"][emoticon]
     else
       puts "I am so sorry. I don't know what #{emoticon} means"
+    end
 end
 
-def get_english_meaning
+def get_english_meaning(path, emoticon)
   # code goes here
+  load = load_library(path)
+    if load["get_meaning"][emoticon]
+      return load["get_meaning"][emoticon]
+    else
+      puts "I am so sorry. I don't know what #{emoticon} means"
+    end
 end
