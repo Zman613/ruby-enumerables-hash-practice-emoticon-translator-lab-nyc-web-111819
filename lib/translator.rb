@@ -13,7 +13,9 @@ def load_library(path)
   new_library["get_emoticon"] = {}
     library.each do |english, emoticons|
       new_library["get_emoticon"][emoticons[0]] = emoticons[1]
+    end
   pp library
+  library
 end
 
 def get_japanese_emoticon
