@@ -24,7 +24,7 @@ def get_japanese_emoticon(path, emoticon)
     if load["get_emoticon"][emoticon]
       return load["get_emoticon"][emoticon]
     else
-      puts "Sorry, that emoticon was not found"
+      "Sorry, that emoticon was not found"
     end
 end
 
@@ -34,6 +34,6 @@ def get_english_meaning(path, emoticon)
     if load["get_meaning"][emoticon]
       return load["get_meaning"][emoticon]
     else
-      puts "Sorry, that emoticon was not found"
+      "Sorry, that emoticon was not found"
     end
 end
