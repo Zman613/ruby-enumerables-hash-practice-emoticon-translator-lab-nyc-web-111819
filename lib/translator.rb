@@ -5,8 +5,12 @@ def load_library(path)
   # code goes here
   library = {}
   library = YAML.load_file(path)
-  library["get_meaning"] = {}
-  library["get_emoticon"] = {}
+  new_library = {}
+  new_library["get_meaning"] = {}
+    library.each do |english, emoticons|
+      new_library["get_meaning"][emoticons[1]] = english
+    end
+  new_library["get_emoticon"] = {}
   pp library
 end
 
